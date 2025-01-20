@@ -10,7 +10,6 @@ class Solution:
         for i in range(0,len(nums1)):
             for j in range(0,len(nums2)):
                 if nums1[i]==nums2[j]:
-                    #print(nums1[i],"----index---at ",i,j)
                     res=findnextgreat(j,len(nums2),nums2)
                     ans.append(res)
         return ans
