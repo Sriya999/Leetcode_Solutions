@@ -1,0 +1,16 @@
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        if len(s)==0:
+            return True
+        #two pointers
+        i=0
+        j=0
+        while i<len(s):
+            while j<len(t) and s[i]!=t[j]:
+                j=j+1
+            if j==len(t):#out of bounds
+                return False
+            i=i+1#if equal then move i,j once
+            j=j+1
+        return True
+        
